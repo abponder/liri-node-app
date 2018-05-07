@@ -32,19 +32,20 @@ var programAction = process.argv[3]
                     console.log(tweets[i].text);
                     console.log("");
                 }
-                
-               
+             
+              
             }
         });
     }
 
     function spotifyThisSong () {
-        spotify.search({ type: 'track', query: 'All the Small Things' }, function(err, data) {
+        spotify.search({ type: 'artist', query: "Broken dreams" }, function(err, data) {
             if (err) {
               return console.log('Error occurred: ' + err);
             }
-           
-          console.log(data); 
+                
+                console.log(data.artists); 
+                
           });
     }
 
@@ -57,6 +58,13 @@ var programAction = process.argv[3]
     }
 
 
+
+
+//     * Artist(s)
+//     * The song's name
+//     * A preview link of the song from Spotify
+//     * The album that the song is from
+//   * If no song is provided then your program will default to "The Sign" by Ace of Base.
 
 
 
